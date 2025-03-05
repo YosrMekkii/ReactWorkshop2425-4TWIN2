@@ -9,6 +9,7 @@ import {Routes,Route,Link} from 'react-router-dom';
 import NavigationBar from './UseCase/NavigationBar';
 import AddEvent from './UseCase/AddEvent';
 import UpdateEvent from './UseCase/UpdateEvent';
+import CounterZustand from './ZustandExamples/CounterZustand';
 
 //import EventDetails from './UseCase/EventDetails';
 const  EventDetails = React.lazy(()=>import('./UseCase/EventDetails'));
@@ -40,6 +41,7 @@ function App() {
       </Route>
 
       <Route  path="*" element={<h1>404 Not found</h1>} /> */}
+      <Route path='/CounterZustand'  element={< CounterZustand />} />
 
       <Route path='/events'>
             <Route index element={<Events />} />
